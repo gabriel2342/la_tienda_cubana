@@ -15,6 +15,16 @@
   </p>
 
   <p>
+    <strong>Item Type:</strong>
+    <%= link_to item.item_type.name, item.item_type %>
+  </p>
+  
+  <p>
+    <strong>Location Made:</strong>
+    <%= link_to item.location.name, item.location %>
+  </p>
+
+  <p>
     <strong>Quantity:</strong>
     <%= item.quantity %>
   </p>

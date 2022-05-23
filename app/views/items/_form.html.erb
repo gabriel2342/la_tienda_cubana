@@ -27,6 +27,16 @@
   </div>
 
   <div>
+     <%= form.label :item_type, style: "display: block" %>
+    <%= form.select :item_type_id, options_for_select(@item_types.collect { |i_type| [i_type.name, i_type.id]})%>
+  </div>
+
+  <div>
+   <%= form.label :location, style: "display: block" %>
+   <%= form.select :location_id, options_for_select(@locations.collect { |locale| [locale.name, locale.id]})%>
+  </div>
+
+  <div>
     <%= form.label :quantity, style: "display: block" %>
     <%= form.number_field :quantity %>
   </div>

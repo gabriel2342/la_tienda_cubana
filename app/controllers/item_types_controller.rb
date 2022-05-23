@@ -67,4 +67,6 @@ class ItemTypesController < ApplicationController
     def item_type_params
       params.require(:item_type).permit(:name)
     end
+
+    
 end

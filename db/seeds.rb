@@ -7,3 +7,9 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 ItemType.create(name: "Painting")
+ItemType.create(name: "Sculpture")
+ItemType.create(name: "Woodwork")
+
+Location.create(name: "Holguin")
+Location.create(name: "Velasco")
+Location.create(name: "Matanzas")

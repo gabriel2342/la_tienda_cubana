@@ -60,5 +60,5 @@ ITEM_TYPE:
       <%= form.select :item_type_id, options_for_select(@item_types.collect { |i_type| [i_type.name, i_type.id]})%>
 
     Show:
-      <strong>Location Made:</strong>
-      <%= link_to item.location.name, item.location %>
+      <strong>Item Type:</strong>
+      <%= link_to item.item_type.name, item.item_type %>
