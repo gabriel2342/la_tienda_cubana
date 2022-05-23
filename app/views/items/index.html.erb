@@ -1,13 +1,36 @@
-  
+
+
   <div class="container"><br><br>
+  <figure class="text-center">
+    <h1>La Tienda Cubana</h1>
+  </figure><br>
+  <%= turbo_frame_tag "new_item" do %>
+    <%= link_to "Add Item", 
+               new_item_path,
+               data: { turbo_frame: "item_frame"}, 
+               class: "btn btn-primary"%> 
+    <% end %> | 
+      <%= turbo_frame_tag "new_item_type" do %>
+    <%= link_to "Add Item Type", 
+               new_item_type_path,
+               data: { turbo_frame: "item_type_frame"}, 
+               class: "btn btn-primary"%> 
+    <% end %> |
     <%= turbo_frame_tag "new_location" do %>
     <%= link_to "Add Location", 
                new_location_path,
                data: { turbo_frame: "location_frame"}, 
                class: "btn btn-primary"%> 
-    <% end %> | 
+    <% end %>  
+  
 
+    <%= turbo_frame_tag "item_frame" do %><% end %>
     <%= turbo_frame_tag "location_frame" do %><% end %>
+    <%= turbo_frame_tag "item_type_frame" do %><% end %>
+
+
+
+    
     <table class="table">
       <thead>
         <tr>

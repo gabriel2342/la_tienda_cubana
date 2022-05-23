@@ -1,8 +1,8 @@
 <div class="container">
   <h1>New item</h1>
-
+<%= turbo_frame_tag "item_frame" do %>
   <%= render "form", item: @item %>
-
+<% end %>
   <br>
 
   <div>
