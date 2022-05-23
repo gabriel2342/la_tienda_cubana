@@ -1,7 +1,8 @@
-<h1>New location</h1>
-
-<%= render "form", location: @location %>
-
+<div class="container">
+  <h1>New location</h1>
+  <%= turbo_frame_tag "location_frame" do %>
+    <%= render "form", location: @location %>
+  <% end %>
 <br>
 
 <div>
