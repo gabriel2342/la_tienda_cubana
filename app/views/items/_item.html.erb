@@ -1,33 +1,36 @@
 
-<div class="container"> 
-  </p>
-    <strong>Creator:</strong>
-    <%= item.item_name %>
-  </p>
+  <div class="container"> 
+    <%= turbo_frame_tag "item_#{item.id}" do %>
 
-  <p>
-    <strong>Description:</strong>
-    <%= item.description %>
-  </p>
+      </p>
+        <strong>Creator:</strong>
+        <%= item.item_name %>
+      </p>
 
-  <p>
-    <strong>Item Type:</strong>
-    <%= link_to item.item_type.name, item.item_type %>
-  </p>
-  
-  <p>
-    <strong>Location Made:</strong>
-    <%= link_to item.location.name, item.location %>
-  </p>
+      <p>
+        <strong>Description:</strong>
+        <%= item.description %>
+      </p>
 
-  <p>
-    <strong>Quantity:</strong>
-    <%= item.quantity %>
-  </p>
+      <p>
+        <strong>Item Type:</strong>
+        <%= link_to item.item_type.name, item.item_type %>
+      </p>
+      
+      <p>
+        <strong>Location Made:</strong>
+        <%= link_to item.location.name, item.location %>
+      </p>
 
-  <p>
-    <strong>Price:</strong>
-    <%= item.price %>
-  </p>
+      <p>
+        <strong>Quantity:</strong>
+        <%= item.quantity %>
+      </p>
+
+      <p>
+        <strong>Price:</strong>
+        <%= item.price %>
+      </p>
+  <% end %>
 </div>
 
